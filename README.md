@@ -1,2 +1,0 @@
-# vivaserver
-viva server
