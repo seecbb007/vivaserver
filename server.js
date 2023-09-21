@@ -478,7 +478,6 @@ app.post("/api/v1/shopproductCardDelete", (req, res) => {
     });
 });
 app.post("/api/v1/shopproductCardUpdate", (req, res) => {
-  // console.log("whatthefuck", req.body.value);
   shoppingCartListModel
     .updateOne({ itemNumber: req.body.value }, { $inc: { quantity: 1 } })
     .then((data) => {
@@ -498,7 +497,6 @@ app.post("/api/v1/shopproductCardUpdate", (req, res) => {
     });
 });
 app.post("/api/v1/shopproductCardUpdatedecrese", (req, res) => {
-  // console.log("whatthefuck", req.body.value);
   // shoppingCartListModel
   //   .updateOne({ itemNumber: req.body.value }, { $inc: { quantity: -1 } })
   //   .then((data) => {
@@ -516,7 +514,7 @@ app.post("/api/v1/shopproductCardUpdatedecrese", (req, res) => {
   //       data: error,
   //     });
   //   });
-  console.log("what", req.body.itemNumber);
+  // console.log("what", req.body.itemNumber);
   shoppingCartListModel
     .findOne(req.body)
     .then((data) => {
@@ -589,7 +587,7 @@ app.post("/api/v1/shopproductCardDeleteAll", (req, res) => {
   shoppingCartListModel
     .deleteMany({})
     .then((data) => {
-      console.log("aall", data);
+      // console.log("aall", data);
       res.send({
         code: 1,
         message:
